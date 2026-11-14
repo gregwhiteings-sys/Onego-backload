@@ -76,7 +76,9 @@ jobs:
           } >> "$GITHUB_ENV"
 
       - name: Configure Bubblewrap SDK paths
-        run: bubblewrap updateConfig --jdkPath="$JAVA_HOME" --androidSdkPath="$ANDROID_HOME"
+        run: |
+          mkdir -p "$HOME/.bubblewrap"
+          printf '{"jdkPath":"%s","androidSdkPath":"%s"}\\n' "$JAVA_HOME" "$ANDROID_HOME" > "$HOME/.bubblewrap/config.json"
 
       - name: Generate Android project
         run: bubblewrap update --skipVersionUpgrade --directory android --manifest android/twa-manifest.ci.json
