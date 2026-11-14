@@ -77,6 +77,14 @@ jobs:
 
       - name: Configure Bubblewrap SDK paths
         run: |
+          CMDLINE_BIN="$(find "$ANDROID_HOME/cmdline-tools" -mindepth 2 -maxdepth 2 -type d -name bin | head -n 1)"
+          if [ -z "$CMDLINE_BIN" ]; then
+            echo "Android command-line tools were not found under $ANDROID_HOME/cmdline-tools." >&2
+            exit 1
+          fi
+          if [ ! -e "$ANDROID_HOME/bin" ]; then
+            ln -s "$CMDLINE_BIN" "$ANDROID_HOME/bin"
+          fi
           mkdir -p "$HOME/.bubblewrap"
           printf '{"jdkPath":"%s","androidSdkPath":"%s"}' "$JAVA_HOME" "$ANDROID_HOME" > "$HOME/.bubblewrap/config.json"
 
