@@ -1,0 +1,33 @@
+{
+  "packageId": "com.onegobusiness.backload",
+  "host": "onego-backload-network.astute-loom-2153.chatgpt.site",
+  "name": "One Go BackLoad",
+  "launcherName": "OneGo",
+  "display": "standalone",
+  "displayOverride": [],
+  "themeColor": "#14253f",
+  "themeColorDark": "#14253f",
+  "navigationColor": "#14253f",
+  "navigationColorDark": "#14253f",
+  "navigationDividerColor": "#00000000",
+  "navigationDividerColorDark": "#00000000",
+  "backgroundColor": "#f7f8f7",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "fullScopeUrl": "https://onego-backload-network.astute-loom-2153.chatgpt.site/",
+  "iconUrl": "https://raw.githubusercontent.com/gregwhiteings-sys/Onego-backload/main/android/icon/onego-business-solutions.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "onego"
+  },
+  "appVersionCode": 1,
+  "appVersion": "1.0.0",
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://onego-backload-network.astute-loom-2153.chatgpt.site/manifest.webmanifest",
+  "fallbackType": "customtabs",
+  "enableSiteSettingsShortcut": true,
+  "minSdkVersion": 21,
+  "orientation": "default",
+  "additionalTrustedOrigins": []
+}
