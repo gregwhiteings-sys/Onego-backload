@@ -27,7 +27,7 @@
   "webManifestUrl": "https://onego-backload-network.astute-loom-2153.chatgpt.site/manifest.webmanifest",
   "fallbackType": "customtabs",
   "enableSiteSettingsShortcut": true,
-  "minSdkVersion": 21,
+  "minSdkVersion": 24,
   "orientation": "default",
   "additionalTrustedOrigins": []
 }
